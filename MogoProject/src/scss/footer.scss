@@ -1,0 +1,116 @@
+.footer {
+  @extend %flex-between;
+  text-align: left;
+  &-left {
+    width: 500px;
+    &_head,
+    &_discription {
+      margin-bottom: 45px;
+      color: $discription-color;
+    }
+    &_discription {
+      font-family: "Roboto", Arial, sans-serif;
+    }
+    &_head {
+      font-size: 46px;
+    }
+    &_head,
+    &_followers {
+      font-family: "Montserrat-bold", Arial, sans-serif;
+    }
+    &_followers {
+      margin-right: 10px;
+    }
+    &_follower {
+      margin-bottom: 20px;
+    }
+    &_socials-list {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid $discription-color;
+      margin-bottom: 35px;
+    }
+    &_socials-item {
+      margin-right: 20px;
+      &:first-child {
+        @extend %roboto-italic;
+      }
+    }
+    &_svg {
+      fill: $main-content-color;
+      transition: .2s linear;
+      &:hover {
+        fill: $pink-color;
+        transition: .2s linear;
+      }
+    }
+    &_input {
+      padding: 15px 20px;
+      border: 1px solid rgb(233, 233, 233);
+    }
+    &_subscribe {
+      display: flex;
+    }
+    &_btn {
+      padding: 17px 35px;
+      background-color: $main-content-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $white-color;
+      transition: .2s linear;
+      cursor: pointer;
+      &:hover {
+        color: $yellow-color;
+        transition: .2s linear;
+      }
+    }
+  }
+  &-center {
+    width: 370px;
+    &_head {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+    &_post {
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    &_date {
+      @extend %roboto-italic;
+    }
+    &_box {
+      @extend %flex-between;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 38px;
+      }
+    }
+    &_content {
+      width: 210px;
+    }
+  }
+  &-right {
+    width: 275px;
+    &_img-holder {
+      @extend %flex-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    &_img {
+      &:not(:nth-child(n+7)) {
+        margin-bottom: 5px;
+      }
+    }
+    &_head {
+      margin-bottom: 40px;
+    }
+    &_view {
+      @extend %roboto-italic;
+      font-size: 13px;
+    }
+  }
+}

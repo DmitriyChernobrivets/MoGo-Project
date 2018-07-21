@@ -1,0 +1,30 @@
+.map {
+    filter: opacity(25%)  grayscale(100%);
+    min-height: 250px;
+    width: 100%;
+}
+.google-map {
+    position: relative;
+    &_head {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        cursor: pointer;
+    }
+    &_top {
+        display: block;
+        @extend %head-bottom;
+        color: $pink-color;
+        cursor: pointer;
+        &:after {
+            @extend %underline2;
+            margin-bottom: 0;
+        }
+    }
+    &_svg {
+        margin-bottom: 20px;
+    }
+}

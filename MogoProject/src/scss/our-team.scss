@@ -1,0 +1,79 @@
+.our-team-head_top {
+  @extend %head-top;
+}
+
+.our-team-head_bottom {
+  @extend %head-bottom;
+  &:after {
+    @extend %underline2;
+  }
+}
+
+.our-team-head_discription {
+  @extend %head-discription;
+  margin-bottom: 100px;
+}
+
+.our-team-item {
+  @extend %flex-between;
+  &_worker-img {
+    position: absolute;
+  }
+  &_svg-icon {
+    fill: $pink-color;
+    &:hover {
+      fill: $white-color;
+    }
+  }
+  &_icon {
+    width: 58px;
+    height: 59px;
+    padding: 10px;
+    background-color: #fce38a;
+    margin: 2px;
+    opacity: 0;
+    transition: all .2s linear;
+  }
+  &_name {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &_specialty {
+    @extend %roboto-italic;
+  }
+  &_img-holder {
+    position: relative;
+    height: 473px;
+    width: 380px;
+    margin-bottom: 30px;
+    transition: all .2s linear;
+    @include flex(center, center, nowrap);
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $gradient;
+      opacity: 0;
+      transition: all .2s linear;
+    }
+    &:hover {
+      transform: translate(-15px, -15px);
+      box-shadow: 15px 15px 1px $main-content-color;
+      transition: all .2s linear;
+    }
+    &:hover .our-team-item_icon {
+      z-index: 11;
+      opacity: 1;
+      transition: all .2s linear;
+    }
+    &:hover::before {
+      opacity: 1;
+      transition: all .2s linear;
+      z-index: 10;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.service2-head_top {
+  @extend %head-top;
+}
+
+.service2-head_bottom {
+  @extend %head-bottom;
+  &:after {
+    @extend %underline2;
+  }
+}
+
+.service2-head_discription {
+  @extend %head-discription;
+  margin-bottom: 100px;
+}
+
+.service2-main {
+  @extend %flex-between;
+  text-align: left;
+  &_img-holder {
+    min-width: 580px;
+  }
+}
+
+.service2-list {
+  flex-basis: 600px;
+  
+  &_item {
+    position: relative;
+    border: 1px solid $discription-color;
+    padding: 0 15px;
+    
+    &:hover .service2-list_discription {
+      transition: height 0.3s ease-out;
+      height: 173px;
+      padding: 20px 15px;
+      border-top: 1px solid black;
+    }
+    &:hover::after {
+      transform: rotate(180deg);
+    }
+    &::before {
+      display: inline-block;
+      content: "";
+      height: 36px;
+      width: 36px;
+      vertical-align: middle;
+      @include bg-icon('../img/PICTURE.svg');
+    }
+    &::after {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      display: inline-block;
+      content: "";
+      height: 36px;
+      width: 36px;
+      @include bg-icon ('../img/ARROW_DOWN.svg');
+    }
+  }
+  &_head {
+    display: inline-block;
+    padding: 25px 15px;
+    text-transform: uppercase;
+  }
+  &_discription {
+    height: 0;
+    overflow: auto;
+    color: $discription-color;
+    transition: .2s linear;
+  }
+}

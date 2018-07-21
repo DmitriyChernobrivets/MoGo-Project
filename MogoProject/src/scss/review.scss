@@ -1,0 +1,49 @@
+.review-bg {
+    @include background(linear-gradient(to top, rgba(255, 255, 255, 0.829), rgba(253, 253, 253, 0.849)), '../img/feature-bg.png');
+}
+.review-head_top {
+    @extend %head-top;
+}
+.review-head_bottom {
+    @extend %head-bottom;
+    &::after {
+        @extend %underline2;
+    }
+}
+.review {
+    &_list {
+        @extend %flex-between;
+        flex-wrap: wrap;
+    }
+    &_item {
+        padding-top: 45px;
+        @extend %flex-between;
+        flex-basis: 45%;
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 400px;
+        text-align: left;
+    }
+    &_name {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        
+    }
+    &_speciality {
+        font-family: "Roboto-LightItalic", Arial, sans-serif;
+        &:after {
+            @extend %underline2;
+            margin: 20px 0;
+        }
+    }
+    &_img {
+        height: 110px;
+    }
+    &_feedback {
+        line-height: 20px;
+        font-family: 'Roboto', Arial, sans-serif;
+        color: #969696;
+    }
+}

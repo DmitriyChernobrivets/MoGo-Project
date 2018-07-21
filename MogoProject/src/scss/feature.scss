@@ -1,0 +1,27 @@
+.feature {
+min-height: 850px;
+text-align: center;
+@include background(linear-gradient(to top, rgba(255, 255, 255, 0.829), rgba(253, 253, 253, 0.849)), '../img/feature-bg.png');
+    &_image-holder {
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+    }
+    &_small-phone {
+        position: absolute;
+        bottom: -100px;
+        right: -115px;
+    }
+}
+.feature-head {
+    padding-top: 100px;
+}
+.feature-head_top {
+    @extend %head-top;
+}
+.feature-head_bottom {
+    @extend %head-bottom;
+    &::after {
+        @extend %underline2;
+    }
+}

@@ -1,0 +1,37 @@
+@mixin flex($justify-content, $align-items, $wrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+
+@mixin fonts($size, $family, $color) {
+  font-size: $size;
+  font-family: $family, Arial, sans-serif;
+  color: $color;
+}
+
+@mixin box-size($width, $height) {
+  width: $width;
+  min-height: $height;
+}
+@mixin background ($gradient, $url) {
+  background: $gradient, url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@mixin bg-icon ($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@mixin underline ($color) {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: $color;
+    margin: 0 auto;
+}

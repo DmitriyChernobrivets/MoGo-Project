@@ -1,0 +1,56 @@
+.blog-head_top {
+  @extend %head-top;
+}
+
+.blog-head_bottom {
+  @extend %head-bottom;
+  &::after {
+    @extend %underline2;
+  }
+}
+
+.blog {
+  &_list {
+    @extend %flex-between;
+  }
+  &_item {
+    flex-basis: 380px;
+    text-align: left;
+    position: relative;
+  }
+  &_head {
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+  &_discription {
+    margin-bottom: 40px;
+    @extend %roboto;
+    line-height: 20px;
+  }
+  &_data {
+    position: absolute;
+    top: 155px;
+    left: -10px;
+    padding: 13px 18px;
+    background-color: $main-content-color;
+    text-align: center;
+    color: $white-color;
+    .data-num {
+      font-size: 32px;
+      @extend %fonts;
+    }
+  }
+  &_socials-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  &_socials {
+    display: inline-block;
+  }
+  &_svg {
+    vertical-align: top;
+  }
+  &_counter {
+    @extend %roboto-italic;
+  }
+}

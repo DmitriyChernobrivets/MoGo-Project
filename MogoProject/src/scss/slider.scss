@@ -1,0 +1,47 @@
+.slider_icon {
+    @include box-size(150px, 150px);
+    border: 3px solid $main-content-color;
+   
+}
+.slider-bg {
+    background-color: $slider-bg-color;
+}
+.slider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    &_content {
+        width: 770px;
+    }
+    &_discription {
+        @extend %roboto-italic;
+        font-size: 24px;
+
+
+    }
+    &_author {
+        margin-top: 25px;
+        @include fonts (24px, 'KaushanScript', #000);
+        &:before {
+            display: inline-block;
+            @extend %pseudo;
+            width: 60px;
+            height: 3px;
+            background-color: $pink-color;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+    }
+    &_left-arrow {
+        @include box-size (30px, 30px);
+        background-image: url(../img/ARROW_LEFT.svg);
+        cursor: pointer;
+    }
+    &_right-arrow {
+        @include box-size (30px, 30px);
+        background-image: url(../img/ARROW_LEFT.svg);
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
+}

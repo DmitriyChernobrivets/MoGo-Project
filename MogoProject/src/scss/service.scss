@@ -1,0 +1,50 @@
+.service-head {
+    &_top {
+        @extend %head-top;
+    }
+    &_bottom {
+        @extend %head-bottom;
+        &::after {
+            @extend %underline2;
+        }
+    }
+}
+.service-list {
+    @include flex(space-between, unset, wrap);
+}
+.service-item {
+    position: relative;
+    &:nth-child(1):after {
+        position: absolute;
+        display: block;
+        content: "";
+        height: 2px;
+        width: 1200px;
+        background-color: $discription-color;
+        bottom: 0;
+    }
+    @extend %flex-between;
+    width: 330px;
+    &:nth-child(-n+3) {
+        padding-bottom: 50px;
+    }
+    &:nth-child(n+4) {
+        padding-top: 50px;
+    }
+    flex-basis: 330px;
+    &_content-box {
+        flex-basis: 84%;
+        text-align: left;
+
+    }
+    &_head {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &_discription {
+        @include fonts (15px, 'Roboto', $discription-color);
+    }
+    &_svg {
+        fill: $main-content-color;
+    }
+}
