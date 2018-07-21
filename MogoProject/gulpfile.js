@@ -42,7 +42,9 @@ gulp.task('styles', () =>
       }),
     )
     .pipe(sass())
-    .pipe(postcss([autoprefixer('latest 15 versions')]))
+    .pipe(postcss([autoprefixer({
+      browsers: ['last 16 versions']
+      })]))
     .pipe(gcmq())
     .pipe(gulp.dest('./build/css'))
     .pipe(cssnano())

@@ -23,13 +23,16 @@
 }
 
 .service2-list {
-  flex-basis: 600px;
+  position: absolute;
   
+  &_wrapper {
+    position: relative;
+    flex-basis: 600px;
+  }
   &_item {
     position: relative;
     border: 1px solid $discription-color;
     padding: 0 15px;
-    
     &:hover .service2-list_discription {
       transition: height 0.3s ease-out;
       height: 173px;

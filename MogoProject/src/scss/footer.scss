@@ -88,6 +88,10 @@
         margin-bottom: 38px;
       }
     }
+    &_box>img:hover {
+      filter: contrast(50%);
+      transition: .2s linear;
+    }
     &_content {
       width: 210px;
     }
@@ -101,6 +105,11 @@
       margin-bottom: 28px;
     }
     &_img {
+      transition: .2s linear;
+      &:hover {
+        filter: contrast(50%);
+        transition: .2s linear;
+      }
       &:not(:nth-child(n+7)) {
         margin-bottom: 5px;
       }
