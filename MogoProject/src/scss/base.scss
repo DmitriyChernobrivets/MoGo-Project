@@ -32,15 +32,17 @@ p,
 figure,
 figcaption,
 button,
-input {
+input,svg,a {
   margin: 0;
   padding: 0;
   list-style: none;
+  border: none;
 }
+
 
 button {
   background: transparent;
-  border: 0;
+  border: none;
 }
 
 a {
@@ -52,6 +54,10 @@ a {
   margin: auto;
   text-align: center;
   padding: $main-padding;
+  &:last-child {
+    padding: 25px 0;
+    border-top: 1px solid $discription-color;
+  }
 }
 
 #wr-head {
@@ -60,10 +66,10 @@ a {
 
 .to-top {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
-  width: 100px;
-  height: 100px;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
   z-index: 10000;
   &_svg {
     fill: rgb(129, 129, 129);
