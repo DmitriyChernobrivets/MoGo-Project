@@ -10,7 +10,7 @@
 .our-story_bottom {
   @extend %head-bottom;
   &::after {
-    @extend %underline2;
+    @include underline($pink-color, 50px);
   }
 }
 

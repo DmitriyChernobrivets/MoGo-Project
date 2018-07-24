@@ -66,8 +66,8 @@
     margin-bottom: 75px;
     text-transform: uppercase;
     &::after {
-      @include underline($white-color);
-      margin-top: 65px;
+      @include underline($white-color, 50px);
+
     }
   }
   &_btn {

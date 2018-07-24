@@ -1,76 +1,79 @@
 .work-head_top {
-    @extend %head-top;
-  }
-  
-  .work-head_bottom {
-    @extend %head-bottom;
-    &:after {
-      @extend %underline2;
-    }
-  }
-  .work-head_discription {
-    @extend %head-discription;
-    margin-bottom: 100px;
-  }
-  .work-examples {
-    display: flex;
-    flex-wrap: wrap;
-    &_head {
-        text-transform: uppercase;
-        color: $white-color;
-        margin-bottom: 15px;
+  @extend %head-top;
+}
 
-    }
-    &_discription {
-        @extend %roboto-italic;
-        color: white;
-    }
-    &_content {
-        position: absolute;
-        z-index: 100;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        opacity: 0;
-        transition: .2s linear;
-    }
-    .work-flex {
-        flex-basis: 50%;
-    }
-    &_pic {
-        width: 100%;
-    }
-    &_svg {
-        fill: $white-color;
-        margin-bottom: 15px;
-    }
+.work-head_bottom {
+  @extend %head-bottom;
+  &:after {
+    @include underline($pink-color, 50px);
   }
-  .work-box {
+}
+
+.work-head_discription {
+  @extend %head-discription;
+  margin-bottom: 100px;
+}
+
+.work-examples {
+  display: flex;
+  flex-wrap: wrap;
+  &_head {
+    text-transform: uppercase;
+    color: $white-color;
+    margin-bottom: 15px;
+  }
+  &_discription {
+    @extend %roboto-italic;
+    color: white;
+  }
+  &_content {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: .2s linear;
+  }
+  .work-flex {
     flex-basis: 50%;
-    display: flex;
-    flex-wrap: wrap;
   }
+  &_pic {
+    width: 100%;
+  }
+  &_svg {
+    fill: $white-color;
+    margin-bottom: 15px;
+  }
+}
+
+.work-box {
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .work-examples_img {
-    position: relative;
-    &::before {
-        display: block;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: $gradient;
-        opacity: 0;
-        transition: .2s linear;
-    }
-    &:hover::before {
-        opacity: 1;
-        transition: .2s linear;
-    }
-    &:hover .work-examples_content{
-        opacity: 1;
-        transition: .2s linear;
-    }
+  position: relative;
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $gradient;
+    opacity: 0;
+    transition: .2s linear;
   }
+  &:hover::before {
+    opacity: 1;
+    transition: .2s linear;
+  }
+  &:hover .work-examples_content {
+    opacity: 1;
+    transition: .2s linear;
+  }
+}

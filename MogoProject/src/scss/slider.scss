@@ -34,14 +34,12 @@
         }
     }
     &_left-arrow {
-        @include box-size (30px, 30px);
+        @extend %slider-arrows;
         background-image: url(../img/ARROW_LEFT.svg);
-        cursor: pointer;
     }
     &_right-arrow {
-        @include box-size (30px, 30px);
+        @extend %slider-arrows;
         background-image: url(../img/ARROW_LEFT.svg);
         transform: rotate(180deg);
-        cursor: pointer;
     }
 }

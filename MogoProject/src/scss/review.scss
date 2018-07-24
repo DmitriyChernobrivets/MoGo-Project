@@ -7,7 +7,7 @@
 .review-head_bottom {
     @extend %head-bottom;
     &::after {
-        @extend %underline2;
+        @include underline($pink-color, 50px);
     }
 }
 .review {
@@ -34,7 +34,7 @@
     &_speciality {
         font-family: "Roboto-LightItalic", Arial, sans-serif;
         &:after {
-            @extend %underline2;
+            @include underline($pink-color, 50px);
             margin: 20px 0;
         }
     }

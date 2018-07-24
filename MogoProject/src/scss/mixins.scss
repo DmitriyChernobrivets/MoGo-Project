@@ -15,23 +15,99 @@
   width: $width;
   min-height: $height;
 }
-@mixin background ($gradient, $url) {
-  background: $gradient, url($url);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 @mixin bg-icon ($url) {
   background-image: url($url);
+  @extend %bg;
+}
+
+%background-plch {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-@mixin underline ($color) {
-    display: block;
-    content: "";
-    width: 60px;
-    height: 3px;
-    background-color: $color;
-    margin: 0 auto;
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bggradient {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  left: 0;
+  background: $gradient;
+}
+
+%head-top {
+  font-size: 24px;
+  font-family: "KaushanScript", Arial, sans-serif;
+  margin-bottom: 25px;
+}
+
+%roboto {
+  font-family: "Roboto", Arial, sans-serif;
+  color: $discription-color;
+}
+
+%roboto-italic {
+  font-family: "Roboto-LightItalic", Arial, sans-serif;
+  color: $discription-color;
+}
+
+%head-bottom {
+  font-size: 30px;
+  font-family: "Montserrat-bold", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+%head-discription {
+  width: 960px;
+  color: $discription-color;
+  margin: 0 auto 100px;
+}
+
+%fonts {
+  color: $white-color;
+  font-family: "Montserrat-bold", Arial, sans-serif;
+}
+
+%montserat-bold-white {
+  color: $white-color;
+  font-family: "Montserrat-bold", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+%slider-arrows {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@mixin background ($gradient, $url) {
+  background: $gradient, url($url);
+  @extend %bg;
+}
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin underline($color, $top-margin) {
+  @extend %underline-base;
+  background-color: $color;
+  margin: $top-margin auto;
+}
+
+%underline-base {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 3px;
 }
