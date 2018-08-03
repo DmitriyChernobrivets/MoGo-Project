@@ -23,8 +23,7 @@
         color: $pink-color;
         cursor: pointer;
         &:after {
-            @extend %underline2;
-            margin-bottom: 0;
+            @include underline($pink-color, 0);;
         }
     }
     &_svg {

@@ -26,7 +26,11 @@
   background-position: center;
   background-size: cover;
 }
-
+%wrapper-base {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
 %flex-between {
   display: flex;
   justify-content: space-between;

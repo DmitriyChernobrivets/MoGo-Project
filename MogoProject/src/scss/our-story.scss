@@ -73,8 +73,8 @@
 .statistic {
   background-color: $main-content-color;
   &_wrapper {
-    @extend %wrapper-base;
     @extend %flex-between;
+    @extend %wrapper-base;
   }
   &_count {
     font-size: 72px;

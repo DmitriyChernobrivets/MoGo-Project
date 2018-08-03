@@ -413,6 +413,12 @@ template {
   src: url("../fonts/Roboto-LightItalic.woff") format("woff");
 }
 
+.statistic_wrapper {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
 .statistic_wrapper,
 .service-item,
 .service2-main,
@@ -431,17 +437,6 @@ template {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.statistic_wrapper {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-.slider_author:before {
-  display: block;
-  content: "";
 }
 
 .bggradient {
@@ -519,17 +514,6 @@ template {
   font-family: "Montserrat-bold", Arial, sans-serif;
 }
 
-.feature-head_bottom::after,
-.blog-head_bottom::after,
-.google-map_top:after {
-  display: block;
-  content: "";
-  width: 60px;
-  height: 3px;
-  background-color: #f38181;
-  margin: 40px auto;
-}
-
 .main-head_bottom,
 .statistic_count {
   color: #fff;
@@ -546,6 +530,8 @@ template {
 
 .header-bg,
 .feature,
+.service2-list_item::before,
+.service2-list_item::after,
 .review-bg {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -556,11 +542,14 @@ template {
 .main-head_bottom::after,
 .our-story_bottom::after,
 .service-head_bottom::after,
+.feature-head_bottom::after,
 .service2-head_bottom:after,
 .our-team-head_bottom:after,
 .work-head_bottom:after,
 .review-head_bottom::after,
-.review_speciality:after {
+.review_speciality:after,
+.blog-head_bottom::after,
+.google-map_top:after {
   display: block;
   content: "";
   width: 60px;
@@ -1078,6 +1067,11 @@ a {
   padding-top: 100px;
 }
 
+.feature-head_bottom::after {
+  background-color: #f38181;
+  margin: 0 auto;
+}
+
 .service2-head_bottom:after {
   background-color: #f38181;
   margin: 50px auto;
@@ -1134,10 +1128,6 @@ a {
   width: 36px;
   vertical-align: middle;
   background-image: url("../img/PICTURE.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover;
 }
 
 .service2-list_item::after {
@@ -1149,10 +1139,6 @@ a {
   height: 36px;
   width: 36px;
   background-image: url("../img/ARROW_DOWN.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover;
 }
 
 .service2-list_head {
@@ -1212,6 +1198,7 @@ a {
 
 .slider_author:before {
   display: inline-block;
+  content: "";
   width: 60px;
   height: 3px;
   background-color: #f38181;
@@ -1522,6 +1509,11 @@ a {
   color: #969696;
 }
 
+.blog-head_bottom::after {
+  background-color: #f38181;
+  margin: 0 auto;
+}
+
 .blog_item {
   -webkit-flex-basis: 380px;
   -ms-flex-preferred-size: 380px;
@@ -1601,7 +1593,8 @@ a {
 }
 
 .google-map_top:after {
-  margin-bottom: 0;
+  background-color: #f38181;
+  margin: 0 auto;
 }
 
 .google-map_svg {

@@ -5,7 +5,7 @@
 .blog-head_bottom {
   @extend %head-bottom;
   &::after {
-    @extend %underline2;
+    @include underline($pink-color, 0);;
   }
 }
 
